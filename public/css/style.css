@@ -1,0 +1,6 @@
+body{
+    color:gray;
+}
+.navbar-default .navbar-toggle {
+    border-color: white;
+}
