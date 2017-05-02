@@ -5,10 +5,10 @@ welcome
 @endsection
 
 @section('content')
-<div class="content">
+<div class="container">
     <div class="title m-b-md">
         <h1> My Blog</h1>
     </div>
-<a href="" class="btn btn-success"> Botonazo</a>
+<a href="" class="btn "> Botonazo</a>
 </div>
 @endsection

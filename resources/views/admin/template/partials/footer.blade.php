@@ -1,1 +1,3 @@
-<div class="panel-footer">Panel footer</div>
+<footer  class="page-footer">
+    <div class="footer-copyright">&copy; Juan Camilo Amaya</div>
+</footer>

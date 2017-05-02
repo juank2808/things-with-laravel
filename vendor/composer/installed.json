@@ -3189,12 +3189,12 @@
         "version_normalized": "0.9.8.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/padraic/mockery.git",
+            "url": "https://github.com/mockery/mockery.git",
             "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/padraic/mockery/zipball/1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
+            "url": "https://api.github.com/repos/mockery/mockery/zipball/1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
             "reference": "1e5e2ffdc4d71d7358ed58a6fdd30a4a0c506855",
             "shasum": ""
         },
@@ -3559,18 +3559,64 @@
         ]
     },
     {
-        "name": "cviebrock/eloquent-sluggable",
-        "version": "4.2.1",
-        "version_normalized": "4.2.1.0",
+        "name": "skydiver/laravel-materialize-css",
+        "version": "v0.98.0",
+        "version_normalized": "0.98.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/cviebrock/eloquent-sluggable.git",
-            "reference": "c576e7b5e2ed038172c7aead618456a45cd73d0b"
+            "url": "https://github.com/skydiver/laravel-materialize-css.git",
+            "reference": "238711f2e9408e341086711c45c4a95ff510e693"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/c576e7b5e2ed038172c7aead618456a45cd73d0b",
-            "reference": "c576e7b5e2ed038172c7aead618456a45cd73d0b",
+            "url": "https://api.github.com/repos/skydiver/laravel-materialize-css/zipball/238711f2e9408e341086711c45c4a95ff510e693",
+            "reference": "238711f2e9408e341086711c45c4a95ff510e693",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.*",
+            "php": ">=5.4.0"
+        },
+        "time": "2017-02-13 14:15:07",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Skydiver\\LaravelMaterializeCSS\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Martin",
+                "email": "labs@flydev.com"
+            }
+        ],
+        "description": "Add Materialize CSS Framework to Laravel",
+        "keywords": [
+            "css",
+            "css framework",
+            "laravel",
+            "material design",
+            "materialize"
+        ]
+    },
+    {
+        "name": "cviebrock/eloquent-sluggable",
+        "version": "4.2.3",
+        "version_normalized": "4.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cviebrock/eloquent-sluggable.git",
+            "reference": "cbeb6e16b783173dbb95e00f78237d349e73c07d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/cbeb6e16b783173dbb95e00f78237d349e73c07d",
+            "reference": "cbeb6e16b783173dbb95e00f78237d349e73c07d",
             "shasum": ""
         },
         "require": {
@@ -3586,7 +3632,7 @@
             "orchestra/testbench": "^3.4",
             "phpunit/phpunit": "~5.7"
         },
-        "time": "2017-02-01 21:56:08",
+        "time": "2017-04-18 15:03:20",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

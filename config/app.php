@@ -179,7 +179,7 @@ return [
         
         /*mi providerr*/
         Collective\Html\HtmlServiceProvider::class,
-        Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Cviebrock\EloquentSluggable\ServiceProvider::class
 
     ],
 
@@ -229,9 +229,10 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        /**mi saliases*/
+        /**mis aliases*/
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'MaterializeCSS' => Skydiver\LaravelMaterializeCSS\MaterializeCSS::class,
 
     ],
 
