@@ -7,3 +7,17 @@ body {
 main {
     flex: 1 0 auto;
 }
+.createForm{
+    
+    padding-left: 30%;
+}
+.collection .collection-item {
+    background-color: #fff;
+    /* line-height: 1.5rem; */
+     padding: 5px 10px; 
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+select{
+    display: inline;
+}

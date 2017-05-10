@@ -1,5 +1,7 @@
 <?php
 
+use \Illuminate\Auth\Middleware\Authenticate;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +17,52 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'], function(){
-    
+Route::group(['prefix' => 'admin','middleware' => 'auth'], function(){
+    //usuarios
     Route::resource('users', 'UsersController');
+    Route::get('users/{id}/destroy',[
+        'uses'  =>'UsersController@destroy',
+        'as'    =>'admin.users.destroy'
+    ]);
+    Route::get('users/{id}/edit/',[
+        'uses'  =>      'UsersController@edit',
+        'as'    =>      'admin.users.edit'
+        ]);
     
+    //categorias
+    Route::resource('categories', 'CategoryController');
+    Route::get('categories/{id}/destroy',[
+        
+        'uses'  =>      'CategoryController@destroy',
+        'as'    =>      'admin.categories.destroy'
+    ]);
+    route::get('categories/{id}/edit',[
+        
+        'uses'  =>      'CategoryController@edit',
+        'as'    =>      'admin.categories.edit'
+    ]);
+    
+    //tags
+    Route::resource('tags', 'TagsController');
+    Route::get('tags/{id}/destroy',[
+        
+        'uses'  =>      'TagsController@destroy',
+        'as'    =>      'admin.tags.destroy'
+    ]);
+    Route::get('tags/{id}/edit',[
+        
+        'uses'  =>      'TagsController@edit',
+        'as'    =>      'admin.tags.edit'
+    ]);
+    //articulos
+    Route::resource('articles', 'ArticlesController');
 });
+
+
+Auth::routes();
+
+Route::get('welcome', 'HomeController@index');
+ Route::get('/logout', function () {
+        Auth::logout();
+        return redirect('/');
+    });

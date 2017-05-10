@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
+
 
 class Tag extends Model
 {
@@ -13,4 +15,11 @@ class Tag extends Model
     public function articles(){
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }
+    // public function scopeSearch($query, $name){
+    //     return $query       =(DB::table('tags')
+    //                             ->where('name','LIKE',$name)
+                                
+    //     );
+    // }
+   
 }
