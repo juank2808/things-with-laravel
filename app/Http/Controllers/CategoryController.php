@@ -60,9 +60,10 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.categories.edit');
+        $category=Category::find($id);
+        return view('admin.categories.edit')->with('category',$category);
         
-        $category = DB::table('categories')->where('id','=',$id);
+        
         
     }
 
@@ -75,7 +76,8 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category =  DB::table('categories')->where ('id',$id)->update(['name'=>$request]);
+        $category = Category::find($id);
+        $category->name = $request->name;
         $category->save();
         return redirect('admin/categories');
         

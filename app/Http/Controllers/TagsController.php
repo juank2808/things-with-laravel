@@ -64,7 +64,7 @@ class TagsController extends Controller
     public function edit($id)
     {
         $tag = Tag::find($id);
-        return view('admin.tags.edit',['tag'=>$tag]);
+        return view('admin.tags.edit')->with('tag',$tag);
     }
 
     /**
@@ -77,11 +77,9 @@ class TagsController extends Controller
     public function update(Request $request, $id)
     {
        
-        
-        DB::table('tags')
-            ->update(['name'=>$request])
-            ->where('id','=',$id);
-        
+        $tag = Tag::find($id);
+        $tag->name = $request->name;
+        $tag->save();
         return redirect('admin/tags');
         
     }

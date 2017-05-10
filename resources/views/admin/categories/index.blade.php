@@ -13,7 +13,7 @@
             <div class="collapsible-header">
                 {{$category->name}}
                 <a class="waves-effect waves-light btn red right" href="{{route ('admin.categories.destroy', $category->id )}}"><i class="material-icons">delete</i></a>
-                <a class="waves-effect waves-light btn yellow right" href=""><i class="material-icons">mode_edit</i></a>
+                <a class="waves-effect waves-light btn yellow right" href="{{route ('admin.categories.edit', $category->id)}}"><i class="material-icons">mode_edit</i></a>
             </div>
             
         </li>
