@@ -22,9 +22,11 @@
     </script>
     <?php echo Form::open(['route' => ['users.update',$user], 'method' => 'PUT' ]); ?>
 
+        
         <div class="row center">
             <div class="col s12 ">
                 <div class="card-panel">
+                    <span class="card-title"><h3>Editar a <?php echo e($user->name); ?></h3></span>
                     <div class="input-field">
                         <i class="material-icons prefix">account_circle</i>
                         <?php echo Form::text('name', $user->name, ['class'=> 'validate', 'placeholder'=>'Nombre' ]  ); ?>
@@ -40,18 +42,11 @@
                         <?php echo Form::label('E-mail', 'E-mail'); ?>
 
                     </div>
-          
-                    <div class="input-field">
-                        <i class="material-icons prefix">lock</i>
-                        <?php echo Form::password('password', ['class'=> 'validate', 'placeholder'=>'Password' ]  ); ?>
-
-                        <?php echo Form::label('Password', 'Password'); ?>
-
-                    </div>
          
+             
                     <div class="input-field">
                         <?php echo Form::label('type','Tipo'); ?><br><br>
-                        <?php echo Form::select('type',[''=>'','member'=>'Miembro','admin'=>'Administrador'],null); ?>
+                        <?php echo Form::select('type',[''=>'','member'=>'Miembro','admin'=>'Administrador'],$user->type); ?>
 
                         
                     </div>

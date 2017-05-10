@@ -15,7 +15,7 @@
             <?php echo Form::open(['route'=>'tags.index', 'method'=>'GET']); ?>
 
                 <div class="input-field">
-                    <?php echo Form::text('name', null,['id'=>'search', 'type'=>'search', 'placeholder'=>'Buscar']); ?>
+                    <?php echo Form::text('name', null,['id'=>'search', 'type'=>'search', 'placeholder'=>'Buscar', 'class'=>'autocomplete']); ?>
 
                     <?php echo Form::label('','',['class'=>'label-icon', 'for'=>'search'] ); ?>
 

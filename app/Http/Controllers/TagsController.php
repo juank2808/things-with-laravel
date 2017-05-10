@@ -13,11 +13,11 @@ class TagsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         
         
-        $tags = DB::table('tags')->get();
+        $tags = Tag::search($request->name)->orderBy('name','ASC')->paginate(100);
         return view('admin.tags.index',['tags'=>$tags]);
     }
 

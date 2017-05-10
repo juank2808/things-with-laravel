@@ -15,7 +15,7 @@
             <!--</form>-->
             {!!Form::open(['route'=>'tags.index', 'method'=>'GET'])!!}
                 <div class="input-field">
-                    {!!Form::text('name', null,['id'=>'search', 'type'=>'search', 'placeholder'=>'Buscar'])!!}
+                    {!!Form::text('name', null,['id'=>'search', 'type'=>'search', 'placeholder'=>'Buscar', 'class'=>'autocomplete'])!!}
                     {!!Form::label('','',['class'=>'label-icon', 'for'=>'search'] )!!}
                 
                     
