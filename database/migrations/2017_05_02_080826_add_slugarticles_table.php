@@ -13,7 +13,7 @@ class AddSlugarticlesTable extends Migration
      */
     public function up()
     {
-        Schema::table('slugarticles', function(Blueprint $table){
+        Schema::table('articles', function(Blueprint $table){
             $table->string('slug')->nullable();
         }) ;
     }
@@ -25,7 +25,7 @@ class AddSlugarticlesTable extends Migration
      */
     public function down()
     {
-        Schema::table('slugarticles', function(Blueprint $table){
+        Schema::table('articles', function(Blueprint $table){
             $table->dropColumn('slug');
         });
     }

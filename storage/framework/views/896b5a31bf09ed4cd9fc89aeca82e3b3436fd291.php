@@ -4,12 +4,14 @@
     </head>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo e(('/css/app.css')); ?>" type="text/css" />
+        <link rel="stylesheet" href="<?php echo e(('/css/trumbowyg.min.css')); ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo e(('/css/style.css')); ?>" type="text/css" />
     <title><?php echo $__env->yieldContent('title'); ?></title>
     </head>
     <body>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="<?php echo e(('/js/app.js')); ?>"></script>
+        <script type="text/javascript" src="<?php echo e(('/js/trumbowyg.js')); ?>"></script>
         <script type="text/javascript" src="<?php echo e(('/js/myscript.js')); ?>"></script>
         
         <?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

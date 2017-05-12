@@ -5,11 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Article extends Model
-{
-    use Sluggable;
+class Article extends Model{
+    // use Sluggable;
     
-    
+    // protected $sluggable = [
+    //     'build_from'    => 'title',
+    //     'save_to'       => 'slug'
+    //     ];
     protected $table = 'articles';
     
     protected $fillable = ['title', 'content', 'category_id', 'user_id'];
@@ -30,11 +32,12 @@ class Article extends Model
     }
     
     /*slug*/
-    public function sluggable(){
-        return [
-            'title-slug' => [
-                'articles'=>'title'
-            ]
-        ];
-    }
+    // public function sluggable(){
+    //     return [
+    //         'title-slug' => [
+    //             'articles'=>'title',
+    //             'separator'=>'-'
+    //         ]
+    //     ];
+    // }
 }

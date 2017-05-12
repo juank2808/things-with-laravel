@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use DB;
 use App\Category;
 use App\Tag;
-
+use App\Article;
+use App\User;
+use App\Image;
 class ArticlesController extends Controller
 {
     /**
@@ -16,7 +18,13 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        
+        $articles = DB::table('articles')->get();
+        $images = DB::table('images')->get(); 
+        $articles->each(function($articles){
+            // $articles->category;
+            // $articles->user;
+        });
+        return view('admin.articles.index',['articles'=>$articles],['images'=>$images]);
     }
 
     /**
@@ -39,13 +47,33 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
+        
+        
+        if($request->file('image')){
         //manipulacion de archivos
-        $file = $request->file('imagen');
-        $file = $request->photo;
+        $file = $request->file('image'); //nombre del input para subir archivos
+        $name ='BlogTeach_'.time().'.'.$file->getClientOriginalExtension(); //asigna nombre para almacenar el doc
+        $path = public_path().'/images/articles/';//ruta para almacenar las imgs
+        $file->move($path, $name);//guardar imagenes lugar, nombre
         
-        $extension = $request->photo->getClientOriginalName();
+        }// dd($path);
         
-        $path = $request->photo->storeAs('/images/articles', 'Blog'.time().'png');
+        $article = new Article($request->all());
+        $article->user_id = \Auth::user()->id;
+        // dd($request->input('tags[]'));
+        // dd( $article->tags());
+        $article->save();
+        // $article->tags()->sync($request->tags);//NO FUNCIONA POR AHORA
+        //rellenamos la table pivote
+        
+        
+        $image = new Image();
+        $image->name=$name;
+        $image->Article()->associate($article);
+        
+        $image->save();
+        
+        return redirect('admin/articles');
         
     }
 
@@ -93,4 +121,9 @@ class ArticlesController extends Controller
     {
         //
     }
+    // private function syncTags(App\Article $article, array $tags=[]){
+        
+        
+    //     $article->tags()->sync($tags);    
+    // }
 }
