@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="center">Crear Articulos</h1>
         <div class="row">
-            <div class="col s8 offset-s2 ">    
+            <div class="col s10 offset-s1 ">    
                 <div class="card-panel">
                     {!!Form::open(['route'=>'articles.store', 'method'=>'POST', 'files'=>true])!!}
                         <div class="input-field">
@@ -21,10 +21,11 @@
                         </select>
                         <!--{!! Form::select('category_id', $categories, null,['placeholder'=>'Elije'])!!}-->
                         </div>
+                        <br><br><br>
                         {!!Form::textarea('content',null,['id'=> 'textarea1', 'class'=> 'materialize-textarea textarea-content', 'placeholder'=>'Contenido'])!!}
                         <div class="input-field">
                         {!!Form::label('tags','Tags')!!}<br><br>
-                        <select name="tag_id" multiple>
+                        <select name="tag_id" multiple="multiple" clasS="chosen-select">
                             @foreach($tags as $tag)
                                 <option value="{{$tag->id}}"> {{$tag->name}}</option>
                             @endforeach

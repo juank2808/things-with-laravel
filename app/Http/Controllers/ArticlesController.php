@@ -16,13 +16,13 @@ class ArticlesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $articles = DB::table('articles')->get();
+        $articles = Article::search($request->title)->orderBy('title','ASC')->get();
         $images = DB::table('images')->get(); 
         $articles->each(function($articles){
-            // $articles->category;
-            // $articles->user;
+            $articles->category;
+            $articles->user;
         });
         return view('admin.articles.index',['articles'=>$articles],['images'=>$images]);
     }
@@ -96,7 +96,16 @@ class ArticlesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $articles = Article::find($id);
+        $articles->category;
+        $categories = Category::orderBy('name','DESC')->get();
+        $tags = Tag::orderBy('name','DECS');
+        return view('admin.articles.edit')
+                    ->with('categories',$categories)
+                    ->with('articles',$articles)
+                    ->with('tags',$tags);
+    
+        
     }
 
     /**
@@ -108,7 +117,13 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $article =Article::find($id);
+       $article->fill($request->all());
+       $article->save();
+       
+       $article->tags()->sync($request->tags);
+       
+       return redirect('admin/articles');
     }
 
     /**
@@ -119,7 +134,10 @@ class ArticlesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+        
+        return redirect('admin/articles');
     }
     // private function syncTags(App\Article $article, array $tags=[]){
         

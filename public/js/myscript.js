@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('#textarea1').val('');
     $('#textarea1').trigger('autoresize');
-    $('.textarea-content').trumbowyg();
+    $(".button-hamburguer").sideNav();
+    $('.slider').slider();
 });

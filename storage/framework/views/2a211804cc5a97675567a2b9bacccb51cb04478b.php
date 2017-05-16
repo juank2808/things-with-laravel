@@ -3,7 +3,7 @@
     <div class="container">
         <h1 class="center">Crear Articulos</h1>
         <div class="row">
-            <div class="col s8 offset-s2 ">    
+            <div class="col s10 offset-s1 ">    
                 <div class="card-panel">
                     <?php echo Form::open(['route'=>'articles.store', 'method'=>'POST', 'files'=>true]); ?>
 
@@ -23,11 +23,12 @@
                         </select>
                         <!--<?php echo Form::select('category_id', $categories, null,['placeholder'=>'Elije']); ?>-->
                         </div>
+                        <br><br><br>
                         <?php echo Form::textarea('content',null,['id'=> 'textarea1', 'class'=> 'materialize-textarea textarea-content', 'placeholder'=>'Contenido']); ?>
 
                         <div class="input-field">
                         <?php echo Form::label('tags','Tags'); ?><br><br>
-                        <select name="tag_id" multiple>
+                        <select name="tag_id" multiple="multiple" clasS="chosen-select">
                             <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tag): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                 <option value="<?php echo e($tag->id); ?>"> <?php echo e($tag->name); ?></option>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
