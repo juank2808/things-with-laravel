@@ -12,6 +12,7 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
+        "nesbot/carbon": "^1.22",
         "skydiver/laravel-materialize-css": "^0.98.0"
     },
     "require-dev": {

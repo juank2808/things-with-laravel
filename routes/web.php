@@ -13,11 +13,33 @@ use \Illuminate\Auth\Middleware\Authenticate;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'as'    =>'home', 
+    'uses'  =>'FrontController@index'
+]);
+Route::get('search/category/{name}',[
+    'as'    =>'search.category',
+    'uses'  =>'FrontController@searchCategory',
+]);
+Route::get('search/tag/{name}',[
+    'as'    =>'search.tags',
+    'uses'  =>'FrotController@searchTags',
+]);
+Route::get('view/article/{id}',[
+    'as'    => 'view.article',
+    'uses'  =>'FrontController@viewArticle',
+    
+]);
 
+
+//rutead de los admin
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function(){
+    //log admin
+    Route::resource('home', 'HomeController');
+    Route::get('/', ['as' =>'home', function(){
+    return view('home');
+    }
+    ]);
     //usuarios
     Route::resource('users', 'UsersController');
     Route::get('users/{id}/destroy',[

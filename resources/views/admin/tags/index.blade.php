@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('title','Tags List')
 @section('content')
-<div class="container">
+<div class="section">
     <a href="{{url('admin/tags/create')}}"class="right waves-effect waves-lights btn-large btn-floating blue "><i class="material-icons">add</i></a>
     <div class="row col s5">
         <ul class="collection col s5">

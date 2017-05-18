@@ -1,6 +1,7 @@
-<?php $__env->startSection('title', 'Articulos'); ?>
+<?php $__env->startSection('title', 'Artículos'); ?>
 <?php $__env->startSection('content'); ?>
-<div class="container">
+
+<div class="section">
     <a href="<?php echo e(url('admin/articles/create')); ?>"class="right waves-effect waves-lights btn-large btn-floating blue "><i class="material-icons">add</i></a>
     <div class="row col s5">
         <ul class="collection col s5">
@@ -25,7 +26,7 @@
         
         <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="row">
-        <div class="col s12 m5">
+        <div class="col s12 m7 l6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title orange-text"><?php echo e($article->title); ?></span>

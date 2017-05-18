@@ -3,7 +3,7 @@
 @section('title', 'Users List')
 
 @section('content')
-<div class="container">
+<div class="section">
     <a href="{{url('admin/users/create')}}"class="waves-effect waves-red btn blue">Registrar</a>
         <table>
             <thead >

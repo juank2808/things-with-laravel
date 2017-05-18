@@ -1,7 +1,7 @@
 <?php $__env->startSection('title', 'Users List'); ?>
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<div class="section">
     <a href="<?php echo e(url('admin/users/create')); ?>"class="waves-effect waves-red btn blue">Registrar</a>
         <table>
             <thead >

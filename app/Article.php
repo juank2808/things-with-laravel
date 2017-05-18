@@ -36,6 +36,7 @@ class Article extends Model{
     }
     
     /*slug*/
+    
     // public function sluggable(){
     //     return [
     //         'title-slug' => [

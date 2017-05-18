@@ -8,6 +8,12 @@ body {
 main {
     flex: 1 0 auto;
 }
+
+nav {
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px;
+
+}
 .createForm{
     
     padding-left: 30%;
@@ -25,6 +31,9 @@ select{
 #mceu_12-body{
      visibility: hidden;
 }
+.page-footer .footer-copyright{
+    text-align: center;
+}
 .slider{
     width: 600px; 
     height: 500px;
@@ -35,4 +44,65 @@ select{
 }
 .slider .indicators .indicator-item.active{
     background-color:#1565c0;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100%;
+}
+
+/*.fa:hover {*/
+/*    opacity: 0.7;*/
+/*}*/
+
+.fa-facebook {
+    /*background: #3B5998;*/
+    color:#3B5998;
+}
+.fa-facebook:hover {
+    background: #3B5998;
+    color: white;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.fa-twitter {
+    /*background: #55ACEE;*/
+    color: #55ACEE;
+}
+.fa-twitter:hover {
+    background: #55ACEE;
+    color: white;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.fa-google {
+    /*background: #dd4b39;*/
+    color: #dd4b39;
+}
+.fa-google:hover {
+    background: #dd4b39;
+    color: white;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.fa-linkedin {
+    /*background: #007bb5;*/
+    color:#007bb5;
+}
+.fa-linkedin:hover {
+    background: #007bb5;
+    color: white;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }

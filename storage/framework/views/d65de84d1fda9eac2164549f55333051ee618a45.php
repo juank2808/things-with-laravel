@@ -1,6 +1,6 @@
 <?php $__env->startSection('title','Tags List'); ?>
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<div class="section">
     <a href="<?php echo e(url('admin/tags/create')); ?>"class="right waves-effect waves-lights btn-large btn-floating blue "><i class="material-icons">add</i></a>
     <div class="row col s5">
         <ul class="collection col s5">

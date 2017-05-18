@@ -1,5 +1,5 @@
 <?php $__env->startSection('title'); ?>
-welcome
+Bienvenido
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
