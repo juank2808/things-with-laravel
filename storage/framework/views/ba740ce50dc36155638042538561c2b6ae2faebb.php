@@ -1,5 +1,11 @@
 <?php $__env->startSection('title', $article->title); ?>
 <?php $__env->startSection('content'); ?>
+    <div class="parallax-container">
+        <?php if(($image->article_id) == ($article->id)): ?>
+      <div class="parallax"><img src="/images/articles/<?php echo e($image->name); ?>"></div>
+        <?php endif; ?>
+    </div>
+        
     <div class="row">
         <div class="col s12 m7 l9">
             <h2><?php echo e($article->title); ?></h2>

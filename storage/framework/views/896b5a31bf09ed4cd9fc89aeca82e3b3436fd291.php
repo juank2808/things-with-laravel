@@ -29,6 +29,7 @@
         </div>
         
         <br>
+        
         <footer>
         <?php echo $__env->make('admin.template.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </footer>

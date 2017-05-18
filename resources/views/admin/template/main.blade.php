@@ -29,6 +29,7 @@
         </div>
         
         <br>
+        
         <footer>
         @include('admin.template.partials.footer')
         </footer>

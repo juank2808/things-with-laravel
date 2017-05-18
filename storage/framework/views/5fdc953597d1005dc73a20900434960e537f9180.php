@@ -14,7 +14,7 @@ Bienvenido
                         <?php $__currentLoopData = $article->images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <a href="<?php echo e(url('/view/article',$article->id)); ?>"><img src="/images/articles/<?php echo e($image->name); ?>"></a>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                        <a href="#"class="card-title black-text"><?php echo e($article->title); ?></a>
+                        <a href="<?php echo e(url('/view/article',$article->id)); ?>"class="card-title black-text"><?php echo e($article->title); ?></a>
                     </div>
                     <div class="card-content">
                         <a class="left"><?php echo e($article->user->name); ?></a><a href="<?php echo e(url('/search/category', $article->category->name)); ?>" class="right"><?php echo e($article->category->name); ?></a>

@@ -16,7 +16,7 @@ Bienvenido
                         @foreach($article->images as $image)
                         <a href="{{url('/view/article',$article->id)}}"><img src="/images/articles/{{$image->name}}"></a>
                         @endforeach
-                        <a href="#"class="card-title black-text">{{$article->title}}</a>
+                        <a href="{{url('/view/article',$article->id)}}"class="card-title black-text">{{$article->title}}</a>
                     </div>
                     <div class="card-content">
                         <a class="left">{{$article->user->name}}</a><a href="{{url('/search/category', $article->category->name)}}" class="right">{{$article->category->name}}</a>

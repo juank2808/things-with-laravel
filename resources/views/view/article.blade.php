@@ -1,6 +1,12 @@
 @extends('admin.template.main')
 @section('title', $article->title)
 @section('content')
+    <div class="parallax-container">
+        @if(($image->article_id) == ($article->id))
+      <div class="parallax"><img src="/images/articles/{{$image->name}}"></div>
+        @endif
+    </div>
+        
     <div class="row">
         <div class="col s12 m7 l9">
             <h2>{{$article->title}}</h2>
