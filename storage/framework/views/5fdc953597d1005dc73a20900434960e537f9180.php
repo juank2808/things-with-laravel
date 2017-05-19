@@ -6,9 +6,9 @@ Bienvenido
 
     <div class="row">
         
-        <div class="col s12 m7 l9">
+        <div class="col l9">
         <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="col s12 m12">
+            <div class="col s12 m4 l5">
                 <div class="card small">
                     <div class="card-image">
                         <?php $__currentLoopData = $article->images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -24,7 +24,7 @@ Bienvenido
             </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
-        <div class="col s12 m5 l3">
+        <div class="col s12 m5 l3 ">
             <?php echo $__env->make('partials.aside', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </div>
     </div>

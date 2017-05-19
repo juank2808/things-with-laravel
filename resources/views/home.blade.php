@@ -8,9 +8,9 @@ Bienvenido
 
     <div class="row">
         
-        <div class="col s12 m7 l9">
+        <div class="col l9">
         @foreach($articles as $article)
-            <div class="col s12 m12">
+            <div class="col s12 m4 l5">
                 <div class="card small">
                     <div class="card-image">
                         @foreach($article->images as $image)
@@ -26,7 +26,7 @@ Bienvenido
             </div>
         @endforeach
         </div>
-        <div class="col s12 m5 l3">
+        <div class="col s12 m5 l3 ">
             @include('partials.aside')
         </div>
     </div>
