@@ -36,7 +36,7 @@ Route::get('view/article/{id}',[
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function(){
     //log admin
     Route::resource('home', 'HomeController');
-    Route::get('/', ['as' =>'home', function(){
+    Route::get('/admin/home', ['as' =>'home', function(){
     return view('home');
     }
     ]);

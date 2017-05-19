@@ -18,7 +18,7 @@ Blog-Learning
             <div class="col l9">
             @foreach($articles as $article)
                 <div class="col s12 m6 l5">
-                    <div class="card small">
+                    <div class="card small ">
                         <div class="card-image">
                             @foreach($article->images as $image)
                             <a href="{{url('/view/article',$article->id)}}"><img src="/images/articles/{{$image->name}}"></a>
@@ -33,12 +33,12 @@ Blog-Learning
                 </div>
             @endforeach
             </div>
-            <div class="col s12 m6 l3  blue-grey darken-4">
+            <div class="col s12 m12 l3  blue-grey darken-4">
                 @include('partials.aside')
             </div>
         </div>
         <div id="up" class="fixed-action-btn ">
-            <a class="btn-floating btn white right pulse">
+            <a class="btn-floating btn white right pulse ">
                 <i class="material-icons black-text">keyboard_arrow_up</i>
             </a>
         </div>

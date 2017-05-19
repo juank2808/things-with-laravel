@@ -16,7 +16,7 @@ Blog-Learning
             <div class="col l9">
             <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <div class="col s12 m6 l5">
-                    <div class="card small">
+                    <div class="card small ">
                         <div class="card-image">
                             <?php $__currentLoopData = $article->images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <a href="<?php echo e(url('/view/article',$article->id)); ?>"><img src="/images/articles/<?php echo e($image->name); ?>"></a>
@@ -31,12 +31,12 @@ Blog-Learning
                 </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
-            <div class="col s12 m6 l3  blue-grey darken-4">
+            <div class="col s12 m12 l3  blue-grey darken-4">
                 <?php echo $__env->make('partials.aside', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
             </div>
         </div>
         <div id="up" class="fixed-action-btn ">
-            <a class="btn-floating btn white right pulse">
+            <a class="btn-floating btn white right pulse ">
                 <i class="material-icons black-text">keyboard_arrow_up</i>
             </a>
         </div>
