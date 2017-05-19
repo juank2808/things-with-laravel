@@ -9,11 +9,6 @@ main {
     flex: 1 0 auto;
 }
 
-nav {
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px;
-
-}
 .createForm{
     
     padding-left: 30%;
@@ -105,4 +100,10 @@ select{
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
+}
+.blog{
+    margin-top: 200px;
+}
+.collection.with-header .collection-headerrgb{
+    background-color:#37474f;
 }

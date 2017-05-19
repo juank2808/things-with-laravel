@@ -4,7 +4,7 @@
     <?php echo Form::open(['route'=>'login','method'=> 'POST']); ?>
 
     <div class="row">
-            <div class="col s5 m5 l6 offset-l3 ">
+            <div class="col s12 m7 l6 offset-m3 offset-l3 ">
                 <div class="collection">
                     <div class="collection-item">
                         <div class="collection-item">

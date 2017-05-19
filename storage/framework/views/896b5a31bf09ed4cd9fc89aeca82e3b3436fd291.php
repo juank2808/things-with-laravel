@@ -23,13 +23,8 @@
         
         <?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
-        <div class="section">
             <!--<?php echo $__env->make('flash::message', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>-->
             <?php echo $__env->yieldContent('content'); ?>
-        </div>
-        
-        <br>
-        
         <footer>
         <?php echo $__env->make('admin.template.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         </footer>

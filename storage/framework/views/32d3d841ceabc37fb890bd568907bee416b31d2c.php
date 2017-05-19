@@ -1,8 +1,10 @@
+<?php if(auth::user()): ?>
 <ul id="dropdown1" class="dropdown-content ">
   <li><a href="" class="blue-text text-darken-2">opcion</a></li>
   <li class="divider"></li>
   <li><a href="<?php echo e(url('/logout')); ?>" class="red-text text-darken-2"><i class="material-icons">power_settings_new</i>Salir</a></li>
 </ul>
+ <?php endif; ?>
   <nav>
     <div class="nav-wrapper blue-grey darken-4">
       <a href="#!" class="brand-logo">Logo</a>

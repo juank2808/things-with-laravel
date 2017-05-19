@@ -23,13 +23,8 @@
         
         @include('admin.template.partials.nav')
 
-        <div class="section">
             <!--@include('flash::message')-->
             @yield('content')
-        </div>
-        
-        <br>
-        
         <footer>
         @include('admin.template.partials.footer')
         </footer>
