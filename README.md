@@ -1,3 +1,3 @@
-###cosas nuevas a usar
-cviebrock/eloquent-sluggable  https://github.com/cviebrock/eloquent-sluggable
-Laravel Collective https://laravelcollective.com/docs/5.3/html
+# Blog Learning
+
+Es una pagina web donde usarios definidos podran subir sus articulo, la elaorbación de la misma tiene como objetivo  adquirir nuevos conocimientos sobre laravel PHP además de un renove en cuanto a front-end se refiere, la web es adaptable a los dispositivos moviles contiene bases de datos relacional y muchas horas de trabajo en solitario!  
