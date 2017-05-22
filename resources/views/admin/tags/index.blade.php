@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title','Tags List')
+@include('admin.template.partials.nav')
 @section('content')
 <div class="section">
     <a href="{{url('admin/tags/create')}}"class="right waves-effect waves-lights btn-large btn-floating blue "><i class="material-icons">add</i></a>

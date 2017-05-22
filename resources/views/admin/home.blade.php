@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 
 @section('title')
-Bienvenido
+Home-{{Auth::user()->name}}
 @endsection
 @include('admin.template.partials.nav')
 @section('content')

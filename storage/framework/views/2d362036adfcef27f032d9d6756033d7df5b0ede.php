@@ -1,5 +1,5 @@
 <?php $__env->startSection('title', 'Categories List'); ?>
-
+<?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->startSection('content'); ?>
 <div class="container">
     <a href="<?php echo e(url('admin/categories/create')); ?>"class="right waves-effect waves-red btn blue">Crear</a>

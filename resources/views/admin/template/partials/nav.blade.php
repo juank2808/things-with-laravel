@@ -35,7 +35,7 @@
         </div>
           <a href="#!user"><img class="circle" src="https://ugc.kn3.net/i/origin/http://simpsonleblog.s.i.pic.centerblog.net/7o6nak0s.gif"></a>
           <a class="green-text" href="#!"><strong>{{Auth::user()->name}}</strong></a>
-          <li><a href="{{url('admin/index') }}">Inicio</a></li>
+          <li><a href="{{url('admin/home') }}">Inicio</a></li>
           <li><a href="{{url('admin/users')}}">Usuarios</a></li>
           <li><a href="{{url('admin/categories')}}">Categorías</a></li>
           <li><a href="{{url('admin/tags')}}">Tags</a></li>

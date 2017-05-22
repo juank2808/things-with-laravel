@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title','Add tags')
+@include('admin.template.partials.nav')
 @section('content')
     {!! Form::open(['route' => 'tags.store', 'method'=>'POST'])!!}
         <div class="row center">
