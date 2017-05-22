@@ -3,6 +3,7 @@
 @section('title','Login')
 
 @section('content')
+@include('admin.template.partials.nav')
     {!!Form::open(['route'=>'login','method'=> 'POST'])!!}
     <div class="row">
             <div class="col s12 m7 l6 offset-m3 offset-l3 ">

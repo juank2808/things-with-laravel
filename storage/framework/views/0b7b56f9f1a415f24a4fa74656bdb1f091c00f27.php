@@ -17,6 +17,6 @@
               </div>
             </div>
           </div>
-
-    <div class="footer-copyright">&copy; Juan Camilo Amaya</div>
+    
+    <div class="footer-copyright"><div class="container center">&copy; Juan Camilo Amaya</div></div>
 </footer>

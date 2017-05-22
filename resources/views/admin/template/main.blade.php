@@ -21,7 +21,6 @@
 </script>
         <script type="text/javascript" src="{{('/js/myscript.js') }}"></script>
         
-        @include('admin.template.partials.nav')
 
             <!--@include('flash::message')-->
             @yield('content')

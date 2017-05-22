@@ -5,14 +5,8 @@ Blog-Learning
 @endsection
 
 @section('content')
-
-    <div class="parallax-container">
-            <h1 class="blue-text center blog">Learning blog</h1>
-        
-        <div class="parallax">
-            <img class="" src="http://g1.pcworld.pl/news/thumb/2/9/296593">
-        </div>
-    </div>
+@include('partials.header')
+@include('admin.template.partials.nav')
     <div class="section  blue-grey darken-4">
         <div class="row">
             <div class="col l9">

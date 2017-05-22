@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 
 @section('title', 'Users List')
-
+@include('admin.template.partials.nav')
 @section('content')
 <div class="section">
     <a href="{{url('admin/users/create')}}"class="waves-effect waves-red btn blue">Registrar</a>

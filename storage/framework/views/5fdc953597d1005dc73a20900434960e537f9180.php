@@ -3,14 +3,8 @@ Blog-Learning
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-
-    <div class="parallax-container">
-            <h1 class="blue-text center blog">Learning blog</h1>
-        
-        <div class="parallax">
-            <img class="" src="http://g1.pcworld.pl/news/thumb/2/9/296593">
-        </div>
-    </div>
+<?php echo $__env->make('partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <div class="section  blue-grey darken-4">
         <div class="row">
             <div class="col l9">

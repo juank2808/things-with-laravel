@@ -3,7 +3,7 @@
 @section('title')
 Bienvenido
 @endsection
-
+@include('admin.template.partials.nav')
 @section('content')
 <div class="container">
     <div class="title m-b-md">

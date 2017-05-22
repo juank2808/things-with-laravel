@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 
 @section('title', 'Crear Usuario')
-
+@include('admin.template.partials.nav')
 @section('content')
     <script>
         var num_opciones = 1;

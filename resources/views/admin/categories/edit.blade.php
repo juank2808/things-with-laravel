@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title','Edit Tag')
+@include('admin.template.partials.nav')
 @section('content')
     {!! Form::open(['route' => ['categories.update',$category], 'method'=>'PUT'])!!}
         <div class="row center">

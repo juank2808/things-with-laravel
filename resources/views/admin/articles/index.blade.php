@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title', 'Artículos')
+@include('admin.template.partials.nav')
 @section('content')
 
 <div class="section">

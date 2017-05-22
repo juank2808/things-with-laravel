@@ -1,5 +1,5 @@
 <?php $__env->startSection('title', 'Users List'); ?>
-
+<?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->startSection('content'); ?>
 <div class="section">
     <a href="<?php echo e(url('admin/users/create')); ?>"class="waves-effect waves-red btn blue">Registrar</a>

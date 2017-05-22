@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 
 @section('title', 'Categories List')
-
+@include('admin.template.partials.nav')
 @section('content')
 <div class="container">
     <a href="{{url('admin/categories/create')}}"class="right waves-effect waves-red btn blue">Crear</a>

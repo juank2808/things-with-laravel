@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title', 'editar articles')
+@include('admin.template.partials.nav')
 @section('content')
     <div class="container">
         <h2 class="center">Editar Articulo - {{$articles->title}}</h2>

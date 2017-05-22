@@ -21,7 +21,6 @@
 </script>
         <script type="text/javascript" src="<?php echo e(('/js/myscript.js')); ?>"></script>
         
-        <?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
             <!--<?php echo $__env->make('flash::message', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>-->
             <?php echo $__env->yieldContent('content'); ?>

@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title', 'Create articles')
+@include('admin.template.partials.nav')
 @section('content')
     <div class="container">
         <h1 class="center">Crear Articulos</h1>

@@ -104,6 +104,10 @@ select{
 .blog{
     margin-top: 200px;
 }
+.titulo-blog{
+    background: #000; 
+    font-family: "times new roman";
+}
 .collapsible{
     border-left-color:#37474f; 
     border-top-color:#37474f; 
@@ -117,4 +121,19 @@ select{
     border-bottom-color:#37474f;
 }
 .titulo-articulo{
+     margin-top: 200px;
+}
+nav .button-collapse {
+    margin-right: 30px;
+
+    margin-left: 18px;
+    
+}
+#logo{
+    width:70px!important; 
+}
+.parallax-container {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
 }

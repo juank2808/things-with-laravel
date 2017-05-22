@@ -1,10 +1,9 @@
 <?php $__env->startSection('title', $article->title); ?>
 <?php $__env->startSection('content'); ?>
+<?php echo $__env->make('admin.template.partials.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <div class="parallax-container">
-         <h1 class="blue-text center titulo-articulo"><?php echo e($article->title); ?></h1>
-        <?php if(($image->article_id) == ($article->id)): ?>
-      <div class="parallax"><img src="/images/articles/<?php echo e($image->name); ?>"></div>
-        <?php endif; ?>
+        <h1 class="blue-text  center titulo-articulo"><?php echo e($article->title); ?></h1>
+      <div class="parallax"><img src="http://www.spicyinnovation.com/wp-content/uploads/2016/08/blog.jpg"></div>
     </div>
     <div class="section">
        <div class="row">

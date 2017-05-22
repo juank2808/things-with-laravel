@@ -1,5 +1,6 @@
 @extends('admin.template.main')
 @section('title', 'Galería de Imágenes')
+@include('admin.template.partials.nav')
 @section('content')
     <div class="section">
         <h1 class="center">Galería de imágenes</h1>

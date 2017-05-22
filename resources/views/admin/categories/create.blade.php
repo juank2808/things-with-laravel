@@ -1,6 +1,6 @@
 @extends('admin.template.main')
-
 @section('title', 'Agregar Categoría')
+@include('admin.template.partials.nav')
 @section('content')
     
     {!!Form::open(['route'=>'categories.store','method'=> 'POST']) !!}
