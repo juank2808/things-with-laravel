@@ -32,7 +32,7 @@ Route::get('view/article/{id}',[
 ]);
 
 
-//rutead de los admin
+//ruta de los admin
 Route::group(['prefix' => 'admin','middleware' => 'auth'], function(){
     //log admin
     Route::resource('home', 'HomeController');
@@ -40,17 +40,19 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'], function(){
     return view('home');
     }
     ]);
-    //usuarios
-    Route::resource('users', 'UsersController');
-    Route::get('users/{id}/destroy',[
-        'uses'  =>'UsersController@destroy',
-        'as'    =>'admin.users.destroy'
-    ]);
-    Route::get('users/{id}/edit/',[
-        'uses'  =>      'UsersController@edit',
-        'as'    =>      'admin.users.edit'
-        ]);
+    //usuarios 
+    Route::group(['middleware'=>'Admin'], function(){
     
+        Route::resource('users', 'UsersController');
+        Route::get('users/{id}/destroy',[
+            'uses'  =>'UsersController@destroy',
+            'as'    =>'admin.users.destroy'
+        ]);
+        Route::get('users/{id}/edit/',[
+            'uses'  =>      'UsersController@edit',
+            'as'    =>      'admin.users.edit'
+            ]); 
+});
     //categorias
     Route::resource('categories', 'CategoryController');
     Route::get('categories/{id}/destroy',[

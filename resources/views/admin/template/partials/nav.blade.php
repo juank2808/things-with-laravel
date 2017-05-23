@@ -7,7 +7,7 @@
    @endif
     <nav>
       <div class="nav-wrapper blue-grey darken-4">
-        @if (auth::user())
+        @if(auth::user())
         <a href="#!" class="brand-logo"><img id="logo" src="/images/logolara.png"></a>
         @else
         <a href="#!" class="brand-logo center"><img id="logo" src="/images/logolara.png"></a>
@@ -16,7 +16,9 @@
         <ul class="right hide-on-med-and-down">
           @if (auth::user())
           <li><a href="{{url('/admin/home') }}">Inicio</a></li>
-          <li><a href="{{url('admin/users')}}">Usuarios</a></li>
+         <!--condicional si fuera admin-->
+            <li><a href="{{url('admin/users')}}">Usuarios</a></li>
+         <!------------------------------->
           <li><a href="{{url('admin/categories')}}">Categorías</a></li>
           <li><a href="{{url('admin/tags')}}">Tags</a></li>
           <li><a href="{{url('admin/articles')}}">Artículos</a></li>
@@ -36,7 +38,9 @@
           <a href="#!user"><img class="circle" src="https://ugc.kn3.net/i/origin/http://simpsonleblog.s.i.pic.centerblog.net/7o6nak0s.gif"></a>
           <a class="green-text" href="#!"><strong>{{Auth::user()->name}}</strong></a>
           <li><a href="{{url('admin/home') }}">Inicio</a></li>
-          <li><a href="{{url('admin/users')}}">Usuarios</a></li>
+           <!--condicional si fuera admin-->
+            <li><a href="{{url('admin/users')}}">Usuarios</a></li>
+           <!------------------------------->
           <li><a href="{{url('admin/categories')}}">Categorías</a></li>
           <li><a href="{{url('admin/tags')}}">Tags</a></li>
           <li><a href="{{url('admin/articles')}}">Artículos</a></li>
