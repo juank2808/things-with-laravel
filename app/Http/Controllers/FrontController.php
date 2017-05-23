@@ -44,11 +44,18 @@ class FrontController extends Controller
             $article->category;
             $article->user;
             //$article->tags;
-            $article->images;  
-        $image = Image::all()->first();
-        // dd($article->images);
+            $array = $article->images->toJson();  
+        // for($i=0;$i<count($array);$i++){
+        //     $id_image       =  $array[$i]->id;
+        //     // $id_image       =   $array[$i]->id;
+        //     $img_name       =   $array[$i]->name;
+        //     $id_article     =   $array[$i]->article_id;
+            
+        //     dd($id_image.$img_name.$id_article);
+        // }
+        // dd($array['article_id']);
         return view('view.article') ->with('article', $article)
-                                    ->with('image', $image)
+                                    // ->with('image', $image)
         ;
     }
 

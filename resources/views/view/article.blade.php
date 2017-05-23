@@ -5,6 +5,7 @@
     <div class="parallax-container">
         <h1 class="blue-text  center titulo-articulo">{{$article->title}}</h1>
       <div class="parallax"><img src="http://www.spicyinnovation.com/wp-content/uploads/2016/08/blog.jpg"></div>
+      <!--<div class="parallax"><img src="/images/articles/{{$article->images}}"></div>-->
     </div>
     <div class="section">
        <div class="row">

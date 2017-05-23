@@ -27,8 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-    public function isAdmin(){
-        return User::where('type','==','admin');
-        
+    public function admin(){
+        return $this->type==='admin';
     }
 }
